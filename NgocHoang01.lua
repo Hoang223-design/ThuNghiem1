@@ -1,31 +1,28 @@
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-
-player:Kick("Bản Hack Tạm Thời Ngưng Hoạt Động Để Được Nâng Cấp!.")
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/HoangzzV2/refs/heads/main/UiREDzV2.lua")))()
 
        local Window = MakeWindow({
          Hub = {
-         Title = "Hoàng.RK Hub",
-         Animation = "create: NgọcHoàng210👑"
+         Title = "HoàngRK Hub",
+         Animation = "Cre: NgọcHoàng20?👑"
          },
         Key = {
-        KeySystem = false,
+        KeySystem = true,
         Title = "Key System",
-        Description = "",
-        KeyLink = "",
-        Keys = {"1234"},
+        Description = "Được Tạo Bởi: Huỳnh Ngọc Hoàng",
+        KeyLink = "Link key không tồn tại muốn sở hữu được key thì phải nhắn admin script!",
+        Keys = {"QuynhNhu"},
         Notifi = {
         Notifications = true,
-        CorrectKey = "Running the Script...",
+        CorrectKey = "Script Đang Chạy!",
        Incorrectkey = "The key is incorrect",
-       CopyKeyLink = "Copied to Clipboard"
+       CopyKeyLink = "Đã sao chép, hãy đọc tin nhắn bạn vừa copy"
       }
     }
   })
 
        MinimizeButton({
-       Image = "http://www.roblox.com/asset/?id=91496814583444",
-       Size = {60, 60},
+       Image = "http://www.roblox.com/asset/?id=136495663671275",
+       Size = {35, 35},
        Color = Color3.fromRGB(10, 10, 10),
        Corner = true,
        Stroke = false,
@@ -33,11 +30,11 @@ player:Kick("Bản Hack Tạm Thời Ngưng Hoạt Động Để Được Nâng 
       })
       
 ------ Tab
-    local Tab1o = MakeTab({Name = "Script Full CN"})
-    local Tab2o = MakeTab({Name = "Script Auto Nhặt Trái"})
-    local Tab3o = MakeTab({Name = "Script Aimbot:)"})
-    local Tab4o = MakeTab({Name = "Script Fix Lag"})
-    local Tab5o = MakeTab({Name = "Script Kaitun"})
+    local Tab1o = MakeTab({Name = "Full Chức Năng"})
+    local Tab2o = MakeTab({Name = "Auto Nhặt Trái"})
+    local Tab3o = MakeTab({Name = "Aimbot:)"})
+    local Tab4o = MakeTab({Name = "Fix Lag"})
+    local Tab5o = MakeTab({Name = "Kaitun"})
     local Tab6o = MakeTab({Name = "???"})
     
 ------- BUTTON
