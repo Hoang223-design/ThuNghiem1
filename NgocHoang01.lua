@@ -1,4 +1,7 @@
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/refs/heads/main/UiREDzV2.lua")))()
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+player:Kick("Bản Hack Tạm Thời Ngưng Hoạt Động Để Được Nâng Cấp!.")
 
        local Window = MakeWindow({
          Hub = {
@@ -140,7 +143,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/
   })
   
   AddButton(Tab6o, {
-     Name = "Bấm Vào Để Nhận Trái Rồng:)",
+     Name = "Bấm Vào Để Lấy Rồng Đi Flex:)",
     Callback = function()
 	  local Players = game:GetService("Players")
 local player = Players.LocalPlayer
