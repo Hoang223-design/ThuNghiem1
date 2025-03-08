@@ -7,14 +7,14 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/Hoan
          },
         Key = {
         KeySystem = true,
-        Title = "Key System",
+        Title = "Nhập key để sử dụng😳",
         Description = "Được Tạo Bởi: Huỳnh Ngọc Hoàng",
         KeyLink = "Link key không tồn tại muốn sở hữu được key thì phải nhắn admin script!",
-        Keys = {"QuynhNhu"},
+        Keys = {"3zvzZZ3uv6MwA3zD3"},
         Notifi = {
         Notifications = true,
         CorrectKey = "Script Đang Chạy!",
-       Incorrectkey = "The key is incorrect",
+       Incorrectkey = "Key vừa nhập không đúng",
        CopyKeyLink = "Đã sao chép, hãy đọc tin nhắn bạn vừa copy"
       }
     }
@@ -40,7 +40,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/Hoan
 ------- BUTTON
     
     AddButton(Tab1o, {
-     Name = "Redz Hub",
+     Name = "Redz",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
@@ -52,28 +52,28 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/r
   })
   
   AddButton(Tab1o, {
-     Name = "Vexezehub",
+     Name = "Vexeze",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/Skidlamcho.txt"))()
   end
   })
   
   AddButton(Tab1o, {
-     Name = "HoHo Hub",
+     Name = "HoHo",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
   end
   })
   
   AddButton(Tab1o, {
-     Name = "ASTRAL Hub",
+     Name = "ASTRAL",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()
   end
   })
   
     AddButton(Tab1o, {
-     Name = "Xero Hub",
+     Name = "Xero",
     Callback = function()
   getgenv().Team = "Marines"
 getgenv().Hide_Menu = false
@@ -83,20 +83,20 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs
   })
   
     AddButton(Tab2o, {
-     Name = "Nhặt trái tự động",
+     Name = "auto Nhặt trái",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/marisdeptrai/Script-Free/main/FruitFinder.lua"))()
   end
   })
   
   AddButton(Tab3o, {
-     Name = "Coming soon",
+     Name = "sắp có !!",
     Callback = function()
   end
   })
   
   AddButton(Tab4o, {
-     Name = "Fix Lag 50%",
+     Name = "dành cho máy yếu tubor x3",
     Callback = function()
 	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
   end
@@ -140,11 +140,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/
   })
   
   AddButton(Tab6o, {
-     Name = "Bấm Vào Để Lấy Rồng Đi Flex:)",
+     Name = "Bấm Vào Để Lấy Rồng Free Đi Flex:)",
     Callback = function()
 	  local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 
-player:Kick("Haha +1 thằng ngu bị lừa🤣.")
+player:Kick("Haha +1 thằng ngu tham lam bị lừa🤣.")
   end
   })
