@@ -1,150 +1,457 @@
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/HoangzzV2/refs/heads/main/UiREDzV2.lua")))()
 
-       local Window = MakeWindow({
-         Hub = {
-         Title = "HoàngRK Hub",
-         Animation = "Cre: NgọcHoàng20?👑"
-         },
-        Key = {
+local Window = MakeWindow({
+    Hub = {
+        Title = "HoàngRK Hub",
+        Animation = "Cre: NgọcHoàng20?👑"
+    },
+    Key = {
         KeySystem = true,
         Title = "Nhập key để sử dụng😳",
         Description = "Được Tạo Bởi: Huỳnh Ngọc Hoàng",
         KeyLink = "Link key không tồn tại muốn sở hữu được key thì phải nhắn admin script!",
-        Keys = {"3zvzZZ3uv6MwA3zD3"},
+        Keys = {"rqiGkmielqXkYrPSFGlGQeQoTriazWyX"},
         Notifi = {
-        Notifications = true,
-        CorrectKey = "Script Đang Chạy!",
-       Incorrectkey = "Key vừa nhập không đúng",
-       CopyKeyLink = "Đã sao chép, hãy đọc tin nhắn bạn vừa copy"
-      }
+            Notifications = true,
+            CorrectKey = "Script Đang Chạy!",
+            Incorrectkey = "Key vừa nhập không đúng",
+            CopyKeyLink = "Đã sao chép, hãy đọc tin nhắn bạn vừa copy"
+        }
     }
-  })
+})
 
-       MinimizeButton({
-       Image = "http://www.roblox.com/asset/?id=136495663671275",
-       Size = {35, 35},
-       Color = Color3.fromRGB(10, 10, 10),
-       Corner = true,
-       Stroke = false,
-       StrokeColor = Color3.fromRGB(255, 0, 0)
-      })
-      
+MinimizeButton({
+    Image = "http://www.roblox.com/asset/?id=136495663671275",
+    Size = {30, 30},
+    Color = Color3.fromRGB(10, 10, 10),
+    Corner = true,
+    Stroke = false,
+    StrokeColor = Color3.fromRGB(255, 0, 0)
+})
+
 ------ Tab
-    local Tab1o = MakeTab({Name = "Full Chức Năng"})
-    local Tab2o = MakeTab({Name = "Auto Nhặt Trái"})
-    local Tab3o = MakeTab({Name = "Aimbot:)"})
-    local Tab4o = MakeTab({Name = "Fix Lag"})
-    local Tab5o = MakeTab({Name = "Kaitun"})
-    local Tab6o = MakeTab({Name = "???"})
-    
+local Tab1o = MakeTab({Name = "Nhạc🎷"})
+local Tab2o = MakeTab({Name = "Full Chức Năng"})
+local Tab3o = MakeTab({Name = "Auto Nhặt Trái"})
+local Tab4o = MakeTab({Name = "Aimbot:)"})
+local Tab5o = MakeTab({Name = "Giảm Lag"})
+local Tab6o = MakeTab({Name = "Kaitun"})
+local Tab7o = MakeTab({Name = "Dịch Chuyển"})
+
 ------- BUTTON
+local currentSound = nil
+
+AddToggle(Tab1o, {
+    Name = "Chipi chipi chapa",
+    Default = false,
+    Callback = function(state)
+        if currentSound and currentSound ~= nil then
+            currentSound:Stop()
+            currentSound = nil
+        end
+        
+        if state then
+            local sound = Instance.new("Sound")
+            sound.Name = "ChipiMusic"
+            sound.Parent = game.Workspace
+            sound.SoundId = "rbxassetid://16190783444"
+            sound.Volume = 2
+            sound.Looped = true
+            sound:Play()
+            currentSound = sound
+            
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "Thông báo!",
+                Text = "Đã bật nhạc Chipi chipi chapa!",
+                Duration = 5
+            })
+        end
+    end
+})
+
+AddToggle(Tab1o, {
+    Name = "Money Rain (Phonk Remix)",
+    Default = false,
+    Callback = function(state)
+        if currentSound and currentSound ~= nil then
+            currentSound:Stop()
+            currentSound = nil
+        end
+        
+        if state then
+            local sound = Instance.new("Sound")
+            sound.Name = "MoneyRainMusic"
+            sound.Parent = game.Workspace
+            sound.SoundId = "rbxassetid://9046862941"
+            sound.Volume = 2
+            sound.Looped = true
+            sound:Play()
+            currentSound = sound
+            
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "Thông báo!",
+                Text = "Đã bật nhạc Money Rain!",
+                Duration = 5
+            })
+        end
+    end
+})
+
+-- Tab2o chỉ giữ các button
+AddButton(Tab2o, {
+    Name = "Redz",
+    Callback = function()
+        local Settings = {
+            JoinTeam = "Pirates";
+            Translator = true;
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+    end
+})
+
+AddButton(Tab2o, {
+    Name = "Vexeze",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/Skidlamcho.txt"))()
+    end
+})
+
+AddButton(Tab2o, {
+    Name = "HoHo",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+    end
+})
+
+AddButton(Tab2o, {
+    Name = "ASTRAL",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()
+    end
+})
+
+AddButton(Tab2o, {
+    Name = "Xero",
+    Callback = function()
+        getgenv().Team = "Marines"
+        getgenv().Hide_Menu = false
+        getgenv().Auto_Execute = false
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
+    end
+})
+
+AddButton(Tab3o, {
+    Name = "auto Nhặt trái",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/marisdeptrai/Script-Free/main/FruitFinder.lua"))()
+    end
+})
+
+AddButton(Tab4o, {
+    Name = "sắp có !!",
+    Callback = function()
+    end
+})
+
+AddButton(Tab5o, {
+    Name = "dành cho máy yếu tubor x3",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+    end
+})
+
+AddButton(Tab6o, {
+    Name = "Kaitun simple",
+    Callback = function()
+        getgenv().simple_settings = {
+            ["MASTERY"] = {
+                ["ACTIVE"] = true,
+                ["METHOD"] = "Half",
+            },
+            ["OBJECTIVE"] = {
+                ["GODHUMAN"] = true,
+                ["RACE-V3"] = true,
+                ["FRAGMENT"] = 100000,
+                ["CANVANDER"] = true,
+                ["BUDDY-SWORD"] = true,
+                ["CURSED-DUAL-KATANA"] = true,
+                ["SHARK-ANCHOR"] = true,
+                ["ACIDUM-RIFLE"] = true,
+                ["VENOM-BOW"] = true,
+                ["SOUL-GUITAR"] = true,
+            },
+            ["FRUITPURCHASE"] = true,
+            ["PRIORITYFRUIT"] = {
+                [1] = "Dragon-Dragon",
+                [2] = "Flame-Flame",
+                [3] = "Rumble-Rumble",
+                [4] = "Human-Human: Buddha",
+                [5] = "Dark-Dark",
+            },
+            ["FPSCAP"] = 30,
+            ["LOWTEXTURE"] = true
+        }
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/refs/heads/main/bloxfruit-kaitan-main.lua"))()
+    end
+})
+
+-- Tab7: Bay đến đảo và Dịch chuyển thông minh
+local flySpeed = 165 -- Tốc độ bay
+local flyHeight = 100 -- Độ cao bay so với tọa độ đích
+local flying = false
+local bodyVelocity, bodyGyro
+
+local function startFly(targetCFrame)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    if not character or not character:FindFirstChild("HumanoidRootPart") then return end
     
-    AddButton(Tab1o, {
-     Name = "Redz",
-    Callback = function()
-	  local Settings = {
-  JoinTeam = "Pirates"; -- Pirates/Marines
-  Translator = true; -- true/false
+    local rootPart = character.HumanoidRootPart
+    bodyVelocity = Instance.new("BodyVelocity")
+    bodyGyro = Instance.new("BodyGyro")
+    
+    bodyVelocity.MaxForce = Vector3.new(400000, 400000, 400000)
+    bodyVelocity.Parent = rootPart
+    
+    bodyGyro.MaxTorque = Vector3.new(400000, 400000, 400000)
+    bodyGyro.Parent = rootPart
+    
+    flying = true
+    
+    spawn(function()
+        local startPos = rootPart.Position
+        local endPos = targetCFrame.Position + Vector3.new(0, flyHeight, 0) -- Bay cao hơn
+        
+        while flying do
+            local currentPos = rootPart.Position
+            local distanceToTarget = (currentPos - endPos).Magnitude
+            
+            -- Dừng lại khi gần đích (khoảng cách < 5)
+            if distanceToTarget < 5 then
+                rootPart.CFrame = CFrame.new(endPos, targetCFrame.Position)
+                stopFly()
+                break
+            end
+            
+            -- Điều chỉnh tốc độ khi gần đích
+            local adjustedSpeed = flySpeed
+            if distanceToTarget < 50 then
+                adjustedSpeed = math.max(flySpeed * (distanceToTarget / 50), 10) -- Giảm tốc độ dần
+            end
+            
+            -- Di chuyển về đích
+            local direction = (endPos - currentPos).Unit
+            bodyVelocity.Velocity = direction * adjustedSpeed
+            bodyGyro.CFrame = CFrame.lookAt(currentPos, endPos)
+            
+            wait(0.01) -- Tăng tần suất cập nhật để chính xác hơn
+        end
+    end)
+end
+
+local function stopFly()
+    flying = false
+    if bodyVelocity then bodyVelocity:Destroy() end
+    if bodyGyro then bodyGyro:Destroy() end
+end
+
+local function TeleportTo(pos)
+    local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = pos
+    end
+end
+
+local function GetCurrentSea()
+    local player = game.Players.LocalPlayer
+    local level = player.Data.Level.Value
+    if level < 700 then
+        return 1 -- Sea 1
+    elseif level < 1500 then
+        return 2 -- Sea 2
+    else
+        return 3 -- Sea 3
+    end
+end
+
+local Sea1Locations = {
+    {"Windmill Village", CFrame.new(979, 16, 1200)},
+    {"Marine Start", CFrame.new(-2570, 6, 2050)},
+    {"Middle Town", CFrame.new(-650, 25, 1800)},
+    {"Jungle", CFrame.new(-1200, 37, 280)},
+    {"Pirate Village", CFrame.new(-1120, 4, 3870)},
+    {"Desert", CFrame.new(950, 7, 4370)},
+    {"Frozen Village", CFrame.new(1150, 7, -1130)},
+    {"Marine Fortress", CFrame.new(-5000, 20, 4350)},
+    {"Skypiea", CFrame.new(-200, 400, -5000)},
+    {"Prison", CFrame.new(4870, 5, 735)},
+    {"Colosseum", CFrame.new(-1450, 7, -3050)},
+    {"Magma Village", CFrame.new(-5250, 8, 8500)},
+    {"Underwater City", CFrame.new(4000, 0, -1500)},
+    {"Fountain City", CFrame.new(5120, 4, 4050)}
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
-  end
-  })
-  
-  AddButton(Tab1o, {
-     Name = "Vexeze",
-    Callback = function()
-	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/Skidlamcho.txt"))()
-  end
-  })
-  
-  AddButton(Tab1o, {
-     Name = "HoHo",
-    Callback = function()
-	  loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
-  end
-  })
-  
-  AddButton(Tab1o, {
-     Name = "ASTRAL",
-    Callback = function()
-	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()
-  end
-  })
-  
-    AddButton(Tab1o, {
-     Name = "Xero",
-    Callback = function()
-  getgenv().Team = "Marines"
-getgenv().Hide_Menu = false
-getgenv().Auto_Execute = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
-  end
-  })
-  
-    AddButton(Tab2o, {
-     Name = "auto Nhặt trái",
-    Callback = function()
-	  loadstring(game:HttpGet("https://raw.githubusercontent.com/marisdeptrai/Script-Free/main/FruitFinder.lua"))()
-  end
-  })
-  
-  AddButton(Tab3o, {
-     Name = "sắp có !!",
-    Callback = function()
-  end
-  })
-  
-  AddButton(Tab4o, {
-     Name = "dành cho máy yếu tubor x3",
-    Callback = function()
-	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
-  end
-  })
-  
-  AddButton(Tab5o, {
-     Name = "Kaitun simple",
-    Callback = function()
-	  getgenv().simple_settings = {
-["MASTERY"] = { -- Settings related to leveling up weapon or skill mastery
-["ACTIVE"] = true, -- Enable or disable mastery leveling (true = enabled, false = disabled)
-["METHOD"] = "Half", -- Method for gaining mastery, "Half"[300] or "Full"[600]
-},
-["OBJECTIVE"] = { -- Goals for farming and unlocking features
-["GODHUMAN"] = true, -- Automatically unlock the "Godhuman" fighting style
-["RACE-V3"] = true, -- Automatically upgrade character race to V3 if possible Human, Mink, (Fishman, Ghoul, Cyborg) soon
-["FRAGMENT"] = 100000, -- Limit number of fragments to collect
--- SWORD
-["CANVANDER"] = true,
-["BUDDY-SWORD"] = true,
-["CURSED-DUAL-KATANA"] = true,
-["SHARK-ANCHOR"] = true, -- soon..
---GUN
-["ACIDUM-RIFLE"] = true,
-["VENOM-BOW"] = true,
-["SOUL-GUITAR"] = true,
-},
-["FRUITPURCHASE"] = true, -- Automatically purchase fruits based on priority list
-["PRIORITYFRUIT"] = { -- List of preferred fruits to purchase or eat in order of priority
-[1] = "Dragon-Dragon",
-[2] = "Flame-Flame",
-[3] = "Rumble-Rumble",
-[4] = "Human-Human: Buddha",
-[5] = "Dark-Dark",
-},
-["FPSCAP"] = 30, -- Limit the frame rate to optimize performance
-["LOWTEXTURE"] = true -- Reduce graphic quality for better performance
+local Sea2Locations = {
+    {"Cafe", CFrame.new(-380, 77, 255)},
+    {"Kingdom of Rose", CFrame.new(-450, 72, 1250)},
+    {"Green Zone", CFrame.new(-2250, 72, -1250)},
+    {"Graveyard", CFrame.new(-5350, 8, 5150)},
+    {"Snow Mountain", CFrame.new(500, 400, -5350)},
+    {"Hot and Cold", CFrame.new(-5900, 15, -2850)},
+    {"Cursed Ship", CFrame.new(920, 125, 32850)},
+    {"Ice Castle", CFrame.new(5500, 40, -6100)},
+    {"Forgotten Island", CFrame.new(-3050, 15, -9750)},
+    {"Dark Arena", CFrame.new(3800, 15, -3800)},
+    {"Usoap Island", CFrame.new(4750, 8, 2850)}
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/simple-hubs/contents/refs/heads/main/bloxfruit-kaitan-main.lua"))()
-  end
-  })
-  
-  AddButton(Tab6o, {
-     Name = "Bấm Vào Để Lấy Rồng Free Đi Flex:)",
-    Callback = function()
-	  local Players = game:GetService("Players")
-local player = Players.LocalPlayer
 
-player:Kick("Haha +1 thằng ngu tham lam bị lừa🤣.")
-  end
-  })
+local Sea3Locations = {
+    {"Port Town", CFrame.new(-950, 15, 5500)},
+    {"Hydra Island", CFrame.new(3400, 72, 2000)},
+    {"Great Tree", CFrame.new(2200, 300, -1500)},
+    {"Floating Turtle", CFrame.new(-10500, 331, -8500)},
+    {"Castle on the Sea", CFrame.new(-5000, 314, -3000)},
+    {"Haunted Castle", CFrame.new(-9500, 100, 5500)},
+    {"Sea of Treats", CFrame.new(-2000, 50, -9000)},
+    {"Tiki Outpost", CFrame.new(-16500, 10, 1000)}
+}
+
+local function SmartTeleport(targetCFrame)
+    local player = game.Players.LocalPlayer
+    local currentSea = GetCurrentSea()
+    local targetSea = nil
+    
+    -- Xác định Sea của đích đến
+    for _, loc in pairs(Sea1Locations) do
+        if loc[2] == targetCFrame then targetSea = 1 break end
+    end
+    for _, loc in pairs(Sea2Locations) do
+        if loc[2] == targetCFrame then targetSea = 2 break end
+    end
+    for _, loc in pairs(Sea3Locations) do
+        if loc[2] == targetCFrame then targetSea = 3 break end
+    end
+    
+    if targetSea and currentSea ~= targetSea then
+        -- Dịch chuyển qua cổng ở Sea 3
+        if currentSea == 3 or targetSea == 3 then
+            local portalPos = CFrame.new(-5000, 314, -3000) -- Castle on the Sea (cổng chính)
+            TeleportTo(portalPos)
+            wait(1) -- Đợi để qua cổng
+        end
+    end
+    
+    -- Bay đến đích
+    startFly(targetCFrame)
+end
+
+AddDropdown(Tab7o, {
+    Name = "Chọn nơi cần đến",
+    Default = "Chọn đảo",
+    Options = (function()
+        local currentSea = GetCurrentSea()
+        if currentSea == 1 then
+            return {"Windmill Village", "Marine Start", "Middle Town", "Jungle", "Pirate Village", "Desert",
+                    "Frozen Village", "Marine Fortress", "Skypiea", "Prison", "Colosseum", "Magma Village",
+                    "Underwater City", "Fountain City"}
+        elseif currentSea == 2 then
+            return {"Cafe", "Kingdom of Rose", "Green Zone", "Graveyard", "Snow Mountain", "Hot and Cold",
+                    "Cursed Ship", "Ice Castle", "Forgotten Island", "Dark Arena", "Usoap Island"}
+        else
+            return {"Port Town", "Hydra Island", "Great Tree", "Floating Turtle", "Castle on the Sea",
+                    "Haunted Castle", "Sea of Treats", "Tiki Outpost"}
+        end
+    end)(),
+    Callback = function(value)
+        local currentSea = GetCurrentSea()
+        local locations = (currentSea == 1 and Sea1Locations) or (currentSea == 2 and Sea2Locations) or Sea3Locations
+        
+        for _, loc in pairs(locations) do
+            if loc[1] == value then
+                if flying then stopFly() end
+                SmartTeleport(loc[2])
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = "Thông báo!",
+                    Text = "Đang dịch chuyển " .. value .. "!",
+                    Duration = 5
+                })
+                break
+            end
+        end
+    end
+})
+
+AddButton(Tab7o, {
+    Name = "Dừng Dịch Chuyển",
+    Callback = function()
+        if flying then
+            stopFly()
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "Thông báo!",
+                Text = "Đã dừng dịch chuyển!",
+                Duration = 5
+            })
+        else
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "Thông báo!",
+                Text = "Không có dịch chuyển nào đang hoạt động!",
+                Duration = 5
+            })
+        end
+    end
+})
+
+AddButton(Tab7o, {
+    Name = "Dịch Chuyển Đến Sea 1",
+    Callback = function()
+        local currentSea = GetCurrentSea()
+        if currentSea ~= 1 then
+            if currentSea == 3 then
+                TeleportTo(CFrame.new(-5000, 314, -3000)) -- Castle on the Sea
+                wait(1)
+            end
+            TeleportTo(CFrame.new(979, 16, 1200)) -- Windmill Village
+        end
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Thông báo!",
+            Text = "Đang dịch chuyển đến Sea 1!",
+            Duration = 5
+        })
+    end
+})
+
+AddButton(Tab7o, {
+    Name = "Dịch Chuyển Đến Sea 2",
+    Callback = function()
+        local currentSea = GetCurrentSea()
+        if currentSea ~= 2 then
+            if currentSea == 3 then
+                TeleportTo(CFrame.new(-5000, 314, -3000)) -- Castle on the Sea
+                wait(1)
+            end
+            TeleportTo(CFrame.new(-380, 77, 255)) -- Cafe
+        end
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Thông báo!",
+            Text = "Đang dịch chuyển đến Sea 2!",
+            Duration = 5
+        })
+    end
+})
+
+AddButton(Tab7o, {
+    Name = "Dịch Chuyển Đến Sea 3",
+    Callback = function()
+        local currentSea = GetCurrentSea()
+        if currentSea ~= 3 then
+            TeleportTo(CFrame.new(-5000, 314, -3000)) -- Castle on the Sea
+            wait(1)
+        end
+        TeleportTo(CFrame.new(-950, 15, 5500)) -- Port Town
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Thông báo!",
+            Text = "Đang dịch chuyển đến Sea 3!",
+            Duration = 5
+        })
+    end
+})
