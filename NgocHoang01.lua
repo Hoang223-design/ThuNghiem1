@@ -2,27 +2,27 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/Hoan
 
 local Window = MakeWindow({
     Hub = {
-        Title = "HoàngRK Hub",
+        Title = "Hoàng Hub",
         Animation = "Cre: NgọcHoàng20?👑"
     },
     Key = {
         KeySystem = true,
-        Title = "Nhập key để sử dụng😳",
-        Description = "Được Tạo Bởi: Huỳnh Ngọc Hoàng",
+        Title = "Nhập key để tiếp tục🌚🥵",
+        Description = "Được Tạo Bởi: Huỳnh Ngọc Hoàng👑",
         KeyLink = "Link key không tồn tại muốn sở hữu được key thì phải nhắn admin script!",
-        Keys = {"rqiGkmielqXkYrPSFGlGQeQoTriazWyX"},
+        Keys = {"XKYZ-FGHN-JMKL-POIU"},
         Notifi = {
             Notifications = true,
-            CorrectKey = "Script Đang Chạy!",
-            Incorrectkey = "Key vừa nhập không đúng",
-            CopyKeyLink = "Đã sao chép, hãy đọc tin nhắn bạn vừa copy"
+            CorrectKey = "Script Đang Chạy🥵!",
+            Incorrectkey = "Key không tồn tại🥵",
+            CopyKeyLink = "Đã sao chép, hãy đọc tin nhắn bạn vừa copy🌚"
         }
     }
 })
 
 MinimizeButton({
     Image = "http://www.roblox.com/asset/?id=136495663671275",
-    Size = {30, 30},
+    Size = {25, 25},
     Color = Color3.fromRGB(10, 10, 10),
     Corner = true,
     Stroke = false,
@@ -30,19 +30,19 @@ MinimizeButton({
 })
 
 ------ Tab
-local Tab1o = MakeTab({Name = "Nhạc🎷"})
-local Tab2o = MakeTab({Name = "Full Chức Năng"})
-local Tab3o = MakeTab({Name = "Auto Nhặt Trái"})
-local Tab4o = MakeTab({Name = "Aimbot:)"})
-local Tab5o = MakeTab({Name = "Giảm Lag"})
-local Tab6o = MakeTab({Name = "Kaitun"})
-local Tab7o = MakeTab({Name = "Dịch Chuyển"})
+local Tab1o = MakeTab({Name = "Nhạc🥁🎷"})
+local Tab2o = MakeTab({Name = "Main👉🏻👈🏻"})
+local Tab3o = MakeTab({Name = "Auto Nhặt Trái🤤🍑"})
+local Tab4o = MakeTab({Name = "Aimbot:)🥷🏻"})
+local Tab5o = MakeTab({Name = "Giảm Lag☘️"})
+local Tab6o = MakeTab({Name = "Kaitun🐢"})
+local Tab7o = MakeTab({Name = "Dịch Chuyển🛸"})
 
 ------- BUTTON
 local currentSound = nil
 
 AddToggle(Tab1o, {
-    Name = "Chipi chipi chapa",
+    Name = "Chipi chipi chapa🐱",
     Default = false,
     Callback = function(state)
         if currentSound and currentSound ~= nil then
@@ -62,7 +62,7 @@ AddToggle(Tab1o, {
             
             game.StarterGui:SetCore("SendNotification", {
                 Title = "Thông báo!",
-                Text = "Đã bật nhạc Chipi chipi chapa!",
+                Text = "Đã bật nhạc Chipi chipi chapa😼!",
                 Duration = 5
             })
         end
@@ -70,7 +70,7 @@ AddToggle(Tab1o, {
 })
 
 AddToggle(Tab1o, {
-    Name = "Money Rain (Phonk Remix)",
+    Name = "Money🤑Rain (Phonk Remix)",
     Default = false,
     Callback = function(state)
         if currentSound and currentSound ~= nil then
@@ -89,8 +89,8 @@ AddToggle(Tab1o, {
             currentSound = sound
             
             game.StarterGui:SetCore("SendNotification", {
-                Title = "Thông báo!",
-                Text = "Đã bật nhạc Money Rain!",
+                Title = "Thông báo🔊!",
+                Text = "🥵Đã bật nhạc Money Rain🥵!",
                 Duration = 5
             })
         end
@@ -99,7 +99,7 @@ AddToggle(Tab1o, {
 
 -- Tab2o chỉ giữ các button
 AddButton(Tab2o, {
-    Name = "Redz",
+    Name = "🩸z",
     Callback = function()
         local Settings = {
             JoinTeam = "Pirates";
@@ -110,7 +110,7 @@ AddButton(Tab2o, {
 })
 
 AddButton(Tab2o, {
-    Name = "Vexeze",
+    Name = "Ve🚗",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/Skidlamcho.txt"))()
     end
@@ -141,20 +141,20 @@ AddButton(Tab2o, {
 })
 
 AddButton(Tab3o, {
-    Name = "auto Nhặt trái",
+    Name = "auto Nhặt 🍑🤤",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/marisdeptrai/Script-Free/main/FruitFinder.lua"))()
     end
 })
 
 AddButton(Tab4o, {
-    Name = "sắp có !!",
+    Name = "sắp có😍 !!",
     Callback = function()
     end
 })
 
 AddButton(Tab5o, {
-    Name = "dành cho máy yếu tubor x3",
+    Name = "dành cho máy yếu💥 x3",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
     end
@@ -196,8 +196,8 @@ AddButton(Tab6o, {
 })
 
 -- Tab7: Bay đến đảo và Dịch chuyển thông minh
-local flySpeed = 165 -- Tốc độ bay
-local flyHeight = 100 -- Độ cao bay so với tọa độ đích
+local flySpeed = 175 -- Tốc độ bay
+local flyHeight = 75 -- Độ cao bay
 local flying = false
 local bodyVelocity, bodyGyro
 
@@ -226,8 +226,8 @@ local function startFly(targetCFrame)
             local currentPos = rootPart.Position
             local distanceToTarget = (currentPos - endPos).Magnitude
             
-            -- Dừng lại khi gần đích (khoảng cách < 5)
-            if distanceToTarget < 5 then
+            -- Dừng lại khi gần đích (khoảng cách < 3)
+            if distanceToTarget < 2 then
                 rootPart.CFrame = CFrame.new(endPos, targetCFrame.Position)
                 stopFly()
                 break
@@ -244,7 +244,7 @@ local function startFly(targetCFrame)
             bodyVelocity.Velocity = direction * adjustedSpeed
             bodyGyro.CFrame = CFrame.lookAt(currentPos, endPos)
             
-            wait(0.01) -- Tăng tần suất cập nhật để chính xác hơn
+            wait(0.03) -- Tăng tần suất cập nhật để chính xác hơn
         end
     end)
 end
@@ -346,8 +346,8 @@ local function SmartTeleport(targetCFrame)
 end
 
 AddDropdown(Tab7o, {
-    Name = "Chọn nơi cần đến",
-    Default = "Chọn đảo",
+    Name = "Chọn đảo cần tới🏞️",
+    Default = "Chọn đảo🏜️",
     Options = (function()
         local currentSea = GetCurrentSea()
         if currentSea == 1 then
@@ -371,7 +371,7 @@ AddDropdown(Tab7o, {
                 if flying then stopFly() end
                 SmartTeleport(loc[2])
                 game.StarterGui:SetCore("SendNotification", {
-                    Title = "Thông báo!",
+                    Title = "Thông báo🔊!",
                     Text = "Đang dịch chuyển " .. value .. "!",
                     Duration = 5
                 })
@@ -382,18 +382,18 @@ AddDropdown(Tab7o, {
 })
 
 AddButton(Tab7o, {
-    Name = "Dừng Dịch Chuyển",
+    Name = "Dừng Tele🐧",
     Callback = function()
         if flying then
             stopFly()
             game.StarterGui:SetCore("SendNotification", {
-                Title = "Thông báo!",
+                Title = "Thông báo🔊!",
                 Text = "Đã dừng dịch chuyển!",
                 Duration = 5
             })
         else
             game.StarterGui:SetCore("SendNotification", {
-                Title = "Thông báo!",
+                Title = "Thông báo🔊!",
                 Text = "Không có dịch chuyển nào đang hoạt động!",
                 Duration = 5
             })
@@ -402,7 +402,7 @@ AddButton(Tab7o, {
 })
 
 AddButton(Tab7o, {
-    Name = "Dịch Chuyển Đến Sea 1",
+    Name = "🌲🌲Sea 1🛸",
     Callback = function()
         local currentSea = GetCurrentSea()
         if currentSea ~= 1 then
@@ -413,7 +413,7 @@ AddButton(Tab7o, {
             TeleportTo(CFrame.new(979, 16, 1200)) -- Windmill Village
         end
         game.StarterGui:SetCore("SendNotification", {
-            Title = "Thông báo!",
+            Title = "Thông báo🔊!",
             Text = "Đang dịch chuyển đến Sea 1!",
             Duration = 5
         })
@@ -421,7 +421,7 @@ AddButton(Tab7o, {
 })
 
 AddButton(Tab7o, {
-    Name = "Dịch Chuyển Đến Sea 2",
+    Name = "🌲☕Sea 2🛸",
     Callback = function()
         local currentSea = GetCurrentSea()
         if currentSea ~= 2 then
@@ -432,7 +432,7 @@ AddButton(Tab7o, {
             TeleportTo(CFrame.new(-380, 77, 255)) -- Cafe
         end
         game.StarterGui:SetCore("SendNotification", {
-            Title = "Thông báo!",
+            Title = "Thông báo🔊!",
             Text = "Đang dịch chuyển đến Sea 2!",
             Duration = 5
         })
@@ -440,7 +440,7 @@ AddButton(Tab7o, {
 })
 
 AddButton(Tab7o, {
-    Name = "Dịch Chuyển Đến Sea 3",
+    Name = "🐢Sea 3🛸",
     Callback = function()
         local currentSea = GetCurrentSea()
         if currentSea ~= 3 then
@@ -449,7 +449,7 @@ AddButton(Tab7o, {
         end
         TeleportTo(CFrame.new(-950, 15, 5500)) -- Port Town
         game.StarterGui:SetCore("SendNotification", {
-            Title = "Thông báo!",
+            Title = "Thông báo🔊!",
             Text = "Đang dịch chuyển đến Sea 3!",
             Duration = 5
         })
