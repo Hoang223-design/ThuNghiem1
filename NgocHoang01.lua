@@ -1,4 +1,4 @@
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/HoangzzV2/refs/heads/main/UiREDzV2.lua")))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/GuiHoang01/refs/heads/main/GuiHoang01.lua")))()
 
 local Window = MakeWindow({
     Hub = {
@@ -6,11 +6,11 @@ local Window = MakeWindow({
         Animation = "Cre: NgọcHoàng20?👑"
     },
     Key = {
-        KeySystem = true,
+        KeySystem = false,
         Title = "Nhập key để tiếp tục🌚🥵",
         Description = "Được Tạo Bởi: Huỳnh Ngọc Hoàng👑",
         KeyLink = "Link key không tồn tại muốn sở hữu được key thì phải nhắn admin script!",
-        Keys = {"XKYZ-FGHN-JMKL-POIU"},
+        Keys = {"1"},
         Notifi = {
             Notifications = true,
             CorrectKey = "Script Đang Chạy🥵!",
@@ -33,7 +33,7 @@ MinimizeButton({
 local Tab1o = MakeTab({Name = "Nhạc🥁🎷"})
 local Tab2o = MakeTab({Name = "Main👉🏻👈🏻"})
 local Tab3o = MakeTab({Name = "Auto Nhặt Trái🤤🍑"})
-local Tab4o = MakeTab({Name = "Aimbot:)🥷🏻"})
+local Tab4o = MakeTab({Name = "Aimbot:)🥵"})
 local Tab5o = MakeTab({Name = "Giảm Lag☘️"})
 local Tab6o = MakeTab({Name = "Kaitun🐢"})
 local Tab7o = MakeTab({Name = "Dịch Chuyển🛸"})
