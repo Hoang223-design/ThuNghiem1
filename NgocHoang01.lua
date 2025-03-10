@@ -2,7 +2,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoang223-design/GuiH
 
 local Window = MakeWindow({
     Hub = {
-        Title = "Hoàng Hub",
+        Title = "HoàngBlackHub: Tạm thời free không cần phải lấy key nhưng sau này sẽ có!",
         Animation = "Cre: NgọcHoàng20?👑"
     },
     Key = {
@@ -32,10 +32,10 @@ MinimizeButton({
 ------ Tab
 local Tab1o = MakeTab({Name = "Nhạc🥁🎷"})
 local Tab2o = MakeTab({Name = "Main👉🏻👈🏻"})
-local Tab3o = MakeTab({Name = "Auto Nhặt Trái🤤🍑"})
-local Tab4o = MakeTab({Name = "Aimbot:)🥵"})
-local Tab5o = MakeTab({Name = "Giảm Lag☘️"})
-local Tab6o = MakeTab({Name = "Kaitun🐢"})
+local Tab3o = MakeTab({Name = "Trái cây/raid🤤🍑"})
+local Tab4o = MakeTab({Name = "Pvp🥵"})
+local Tab5o = MakeTab({Name = "Khác☘️"})
+local Tab6o = MakeTab({Name = "tunkai🐢"})
 local Tab7o = MakeTab({Name = "Dịch Chuyển🛸"})
 
 ------- BUTTON
@@ -70,7 +70,7 @@ AddToggle(Tab1o, {
 })
 
 AddToggle(Tab1o, {
-    Name = "Money🤑Rain (Phonk Remix)",
+    Name = "Money🤑Rain (Phonk)",
     Default = false,
     Callback = function(state)
         if currentSound and currentSound ~= nil then
